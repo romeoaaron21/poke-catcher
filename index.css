@@ -7,6 +7,27 @@
     url("//db.onlinewebfonts.com/t/b2e75c336df191233b3096682c9ee6be.svg#PixelarRegularW01-Regular") format("svg");
  }
 
+ /* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
 body{
     background-image: url('https://pbs.twimg.com/media/DVMT-6OXcAE2rZY.jpg:large');
     background-repeat: no-repeat;
@@ -200,6 +221,10 @@ label{
     font-size: 1.2rem;
 }
 
+.counter{
+    margin-left: 30px;
+}
+
 .con3-details{
     margin-top: 10vh;
     height: 30vh;
@@ -225,3 +250,16 @@ label{
     font-weight: 700;
 }
 
+.pokemon{
+    border: 2px solid;
+}
+
+/* 
+.pokeList1, .pokeList2, .pokeList3{
+    display: block;
+    border: 2px solid
+} */
+
+.captured-pokemon1, .captured-pokemon3, .captured-pokemon5{
+   float: left;
+}

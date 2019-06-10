@@ -8,12 +8,15 @@ const pokemonStats = document.querySelector('.con3-information');
 const pokemonName = document.querySelector('.pokemon-name');
 const captureBtn = document.querySelector('.capture-button');
 const capturedPokemon = document.querySelector('.captured-pokemon');
+const capturedCount = document.querySelector('.counter');
 var regionArr = [];
 var capturedList = [];
 
 
 
 
+
+capturedCount.innerHTML = capturedList.length + '/'+'6'
 
 fetch(`${baseUrl}region`)
     .then(response => response.json()) 
@@ -79,6 +82,7 @@ exploreBtn.addEventListener('click', function() {
         getPokemons([...pokemon]);
         
     })
+    checkDisplay();
 })
 
 
@@ -133,30 +137,54 @@ captureBtn.addEventListener('click', function() {
 
     capturedList.push({name:`${name}`, url:`${pic}`});
 
+capturedCount.innerHTML = capturedList.length + '/'+'6'
 
     displayCaptured([...capturedList]);
+
+    pokemonStats.style.display = 'none'
+    encounteredPokemon.style.display = 'none'
+    captureBtn.style.display = 'none'
+    pokemonName.style.display = 'none'
+
+    
     
 
 
 })
 
+function checkDisplay(){
+    console.log(capturedList.length);
+
+    if(capturedList.length < 6){
+        captureBtn.style.display = 'block'
+        pokemonName.style.display = 'block'
+        pokemonStats.style.display = 'block'
+        encounteredPokemon.style.display = 'block'
+
+    }else if(capturedList.length=== 6){
+        pokemonStats.style.display = 'block'
+        encounteredPokemon.style.display = 'block'
+    }
+}
+
 
 function displayCaptured(capturedArr){
-
     if(capturedArr.length > 5){
-        captureBtn.style.display = 'none';
+        captureBtn.style.display= 'none';
     } else{
 
 
-       var count = 0;
+        var count = 1;
 
     let capturedList = capturedArr.map(captured => {
-        return `<div><img src="${captured.url}" name="${name}" height="180"/></div><span>${captured.name.toUpperCase()}</span>`
-        count++;
+        
+        return `<div class="pokemon ${count}"><img src="${captured.url}" name="${name}" height="180"/></div><br/><span>${captured.name.toUpperCase()}</span>`
+        
 
     }).join('')
-    capturedPokemon.innerHTML = capturedList;
-}
+    document.querySelector(`.captured-pokemon${count}`).innerHTML = capturedList;
+    count = count+1;
+    }
 }
 
 
