@@ -28,33 +28,19 @@
                 <label>Region</label>
                 <div class="select"> 
                         <select name="regions" id="regions">
-                            
+
                         </select> 
                 </div> 
 
                 <label>Location</label>
                 <div class="select"> 
-                        <select name="slct" id="slct"> 
-                            <option>Computer Science Subjects</option> 
-                            <option value="1">Operating System</option> 
-                            <option value="2">Computer Networks</option> 
-                            <option value="3">Data Structure</option> 
-                            <option value="4">Algorithm</option> 
-                            <option value="5">C programming</option> 
-                            <option value="6">JAVA</option> 
+                        <select name="locations" id="locations"> 
                         </select> 
                 </div> 
 
                 <label>Area</label>
                 <div class="select"> 
-                        <select name="slct" id="slct"> 
-                            <option>Computer Science Subjects</option> 
-                            <option value="1">Operating System</option> 
-                            <option value="2">Computer Networks</option> 
-                            <option value="3">Data Structure</option> 
-                            <option value="4">Algorithm</option> 
-                            <option value="5">C programming</option> 
-                            <option value="6">JAVA</option> 
+                        <select name="areas" id="areas"> 
                         </select> 
                 </div> 
 
@@ -74,10 +60,10 @@
                 </div>
 
                 <div class="con2-explore">
-                    <button class="button btn-round">Explore</button>
+                    <button class="button btn-round" id="explore">Explore</button>
                 </div>
-            
-                
+
+
             </div>
 
 
@@ -89,8 +75,15 @@
                     <div class="con3-pokemon-header">
                         <span>ENCOUNTER</span>
                     </div>
+                    
+                    <div class="display-pokemon">
 
+                    <div class="pokemon-name"></div>
+                    <div class="encountered-pokemon"></div>
+                    <div class="capture-button"></div>
+                    </div>
 
+                
 
                     <div class="con3-details">
 
@@ -99,21 +92,24 @@
                         <span>DETAILS</span>
                     </div>
                     
-                    <div class="con3-information">
-                        asdasdasd
-                    </div>
-                    
-                    </div>
 
+                    <div class="con3-information"></div>
 
+                    </div>
                 </div>
+
+
+                
 
                 <div class="con3-catch">
                     <div class="con3-catch-header">
                         <span>CAPTURED</span>
                     </div>
 
-                    <div class="con3-details"><span>DETAILS</span></div>
+                    <div class="captured-pokemon">
+                        
+                    </div>
+
                 </div>
 
 
@@ -123,7 +119,7 @@
 
     </main>
 
-    <script src="js/region.js"></script>
+    <script type="module" src="js/main.js"></script>
 
 </body>
-</html>
+</html> 

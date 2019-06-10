@@ -72,11 +72,8 @@ const base = 'https://pokeapi.co/api/v2/';
         let regions = data.results;
 
         let regionList = regions.map(region => {
-            return `
-            <option value="${region.name}">${region.name}</option>
-            `
+            return regionList;
         })
-        document.querySelector("#regions").innerHTML = regionList
         })
     .catch(error => console.error(error))
 })
