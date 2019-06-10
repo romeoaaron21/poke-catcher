@@ -14,6 +14,7 @@ var capturedList = [];
 
 
 
+
 fetch(`${baseUrl}region`)
     .then(response => response.json()) 
     .then(function(region) {
@@ -23,7 +24,7 @@ fetch(`${baseUrl}region`)
     })
 
 
-regions.addEventListener('select', function () {
+regions.addEventListener('change', function () {
         getLocations();
 })
 
@@ -91,10 +92,13 @@ function getPokemon(pokemonData){
     .then(response => response.json())
     .then(function(pokemon) {
         getStats([...pokemon.stats]);
-        capturePokemon(pokemon.name, pokemon.sprites.front_default)
-        pokemonName.innerHTML = `<span>${pokemon.name.toUpperCase()}</span>`
-        encounteredPokemon.innerHTML = `<img src="${pokemon.sprites.front_default}" name="${pokemon.name}" height="250"/>`
+        
+        
+        pokemonName.innerHTML = `<span id="pname">${pokemon.name.toUpperCase()}</span>`
+        encounteredPokemon.innerHTML = `<img id="ppic" src="${pokemon.sprites.front_default}" name="${pokemon.name}" height="250"/>`
         captureBtn.innerHTML = `<button class="capture button1">CAPTURE</button>`
+        //capturePokemon(pokemon.name, pokemon.sprites.front_default)
+        //capturePokemon();
         
     })
     
@@ -112,20 +116,78 @@ function getStats(statsArr){
 
 
 
-function capturePokemon(name, picture){
-    captureBtn.addEventListener('click', function() {
 
-        capturedList.push({name, picture});
-        console.log(capturedList)
+// function capturePokemon(){
+//     var name = document.getElementById("pname").innerText;
+//     var pic = document.getElementById("ppic").src;
 
-        //capturedPokemon.append(<div><img src="${picture}" name="${name}" height="250"/></div><span>${name.toUpperCase()}</span>);
-    })
+
+//     savePokemon(name,pic);
+// }
+
+
+
+captureBtn.addEventListener('click', function() {
+    var name = document.getElementById("pname").innerText;
+    var pic = document.getElementById("ppic").src;
+
+    capturedList.push({name:`${name}`, url:`${pic}`});
+
+
+    displayCaptured([...capturedList]);
+    
+
+
+})
+
+
+function displayCaptured(capturedArr){
+
+    if(capturedArr.length > 5){
+        captureBtn.style.display = 'none';
+    } else{
+
+
+       var count = 0;
+
+    let capturedList = capturedArr.map(captured => {
+        return `<div><img src="${captured.url}" name="${name}" height="180"/></div><span>${captured.name.toUpperCase()}</span>`
+        count++;
+
+    }).join('')
+    capturedPokemon.innerHTML = capturedList;
+}
 }
 
 
 
 
 
+// function savePokemon(name, picture){
+//     captureBtn.addEventListener('click', function() {
+
+//         capturedList.push({name:`${name}`, url:`${picture}`});
+//         console.log(capturedList)
+
+//         //capturedPokemon.append(<div><img src="${picture}" name="${name}" height="250"/></div><span>${name.toUpperCase()}</span>);
+//     })
+// }
+
+
+
+
+
+
+
+// function capturePokemon(name, picture){
+//     captureBtn.addEventListener('click', function() {
+
+//         capturedList.push({name:`${name}`, url:`${picture}`});
+//         console.log(capturedList)
+
+//         //capturedPokemon.append(<div><img src="${picture}" name="${name}" height="250"/></div><span>${name.toUpperCase()}</span>);
+//     })
+// }
 
 
 
