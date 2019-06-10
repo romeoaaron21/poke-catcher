@@ -137,7 +137,7 @@ captureBtn.addEventListener('click', function() {
 
     capturedList.push({name:`${name}`, url:`${pic}`});
 
-capturedCount.innerHTML = capturedList.length + '/'+'6'
+
 
     displayCaptured([...capturedList]);
 
@@ -145,6 +145,7 @@ capturedCount.innerHTML = capturedList.length + '/'+'6'
     encounteredPokemon.style.display = 'none'
     captureBtn.style.display = 'none'
     pokemonName.style.display = 'none'
+    capturedCount.innerHTML = capturedList.length + '/'+'6'
 
     
     
@@ -169,21 +170,29 @@ function checkDisplay(){
 
 
 function displayCaptured(capturedArr){
-    if(capturedArr.length > 5){
+    
+    if(capturedArr.length > 6){
         captureBtn.style.display= 'none';
     } else{
 
 
-        var count = 1;
+    let count = 1;
 
     let capturedList = capturedArr.map(captured => {
         
-        return `<div class="pokemon ${count}"><img src="${captured.url}" name="${name}" height="180"/></div><br/><span>${captured.name.toUpperCase()}</span>`
+        return `<div class="pokemon ${count}" id="pokemon">
+        <div class="poke-img"><img src="${captured.url}" name="${name}" height="220"/></div>
+        <div class="poke-name">
+        <span>${captured.name.toUpperCase()}</span>
+        </div>
+        </div>`
         
 
     }).join('')
-    document.querySelector(`.captured-pokemon${count}`).innerHTML = capturedList;
+    document.querySelector(`.pokeList`).innerHTML = capturedList;
     count = count+1;
+    
+    
     }
 }
 
