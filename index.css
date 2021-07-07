@@ -1,0 +1,275 @@
+@font-face {font-family: "PixelarRegularW01-Regular";
+    src: url("//db.onlinewebfonts.com/t/b2e75c336df191233b3096682c9ee6be.eot");
+    src: url("//db.onlinewebfonts.com/t/b2e75c336df191233b3096682c9ee6be.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/b2e75c336df191233b3096682c9ee6be.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/b2e75c336df191233b3096682c9ee6be.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/b2e75c336df191233b3096682c9ee6be.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/b2e75c336df191233b3096682c9ee6be.svg#PixelarRegularW01-Regular") format("svg");
+ }
+
+ /* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+body{
+    background-image: url('https://pbs.twimg.com/media/DVMT-6OXcAE2rZY.jpg:large');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    font-family: "PixelarRegularW01-Regular";
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+select { 
+    background: white; 
+    background-image: none; 
+    border:1px solid black; 
+    width: 100%; 
+    height: 100%; 
+    margin: 0; 
+    padding: 0 0 0 .5em; 
+    color: black; 
+    cursor: pointer; 
+} 
+
+.select { 
+    position: relative; 
+    display: inline-block; 
+    width: 35vh; 
+    height: 1.4em; 
+    line-height: 1; 
+    background: rgb(94, 110, 126); 
+    overflow: hidden; 
+    border-radius: .25em; 
+    font-size: 0.8em;
+}
+
+select::-ms-expand { 
+    display: none; 
+}  
+
+.select::after { 
+    content: '\25BC'; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    padding: 0 1em; 
+    background: rgb(121, 139, 158); 
+    pointer-events: none; 
+} 
+
+.select:hover::after { 
+    color: #F39C12; 
+    font-size: 0.8em;
+} 
+
+
+.select::after { 
+    -webkit-transition: .25s all ease; 
+    -o-transition: .25s all ease; 
+    transition: .25s all ease; 
+} 
+
+.button {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.button:hover{
+    background-color: #acca00;
+}
+
+.btn-round {
+    background-color: greenyellow;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 0;
+    width: 100%;
+}
+
+.button1:hover{
+    background-color: rgb(92, 92, 255);
+}
+
+.capture{
+    background-color: #386bba;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 0;
+    border-radius: 20px;
+    width: 25%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.con1{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0 40px;
+    font-weight: 1000;
+    background-color: rgba(255, 255, 255, 0.192);
+}
+
+.con1-place{
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+label{
+    padding: 20px;
+}
+
+#logo{
+    height: 7vh;
+}
+
+.con2{
+    display: flex;
+    width: 95%;
+    margin:5px auto;
+
+}
+
+.con2-greetings{
+    width: 35%;
+    background-color: orange;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.con2-explore{
+    width: 65%;
+    background-color: greenyellow;
+    height: 40px;
+    border-left: 6px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.con3{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con3-pokemon, .con3-catch{
+    width: 49%;
+    background-color: rgba(255, 255, 255, 0.575);
+
+}
+
+.con3-pokemon-header, .con3-catch-header{
+    height: 5vh;
+    background-color: rgb(250, 73, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.counter{
+    margin-left: 30px;
+}
+
+.con3-details{
+    height: 30vh;
+    background-color: white;
+    border: 2px solid;
+   position: absolute;
+   width: 46.6%;
+}
+
+
+.con3-details span, .con3-details .con3-information{
+    padding: 10px;
+}
+
+.encountered-pokemon, .pokemon-name, .capture-button{
+    text-align: center;
+}
+
+.pokemon-name{
+    margin-top: 40px;
+}
+
+.pokemon-name span{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.pokeList1, .pokeList2, .pokeList3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+} 
+
+
+.captured-pokemon1, .captured-pokemon2, .captured-pokemon3, .captured-pokemon4, .captured-pokemon5, .captured-pokemon6{
+    border: 1px solid;
+}
+
+
+#pokemon{
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+}
+
+.capture-button{
+    margin-bottom: 20px;
+}

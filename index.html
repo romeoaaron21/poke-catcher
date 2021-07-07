@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Catcher</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="//db.onlinewebfonts.com/c/b2e75c336df191233b3096682c9ee6be?family=PixelarRegularW01-Regular" rel="stylesheet">
+
+</head>
+<body>
+
+    <main>
+
+        <div class="container">
+
+            <div class="con1">
+
+                <div class="con1-logo">
+                    <img id="logo" src="images/Poke-Catcher.png" alt="" />
+                </div>
+
+                <div class="con1-place">
+
+                <label>Region</label>
+                <div class="select"> 
+                        <select name="regions" id="regions">
+
+                        </select> 
+                </div> 
+
+                <label>Location</label>
+                <div class="select"> 
+                        <select name="locations" id="locations"> 
+                        </select> 
+                </div> 
+
+                <label>Area</label>
+                <div class="select"> 
+                        <select name="areas" id="areas"> 
+                        </select> 
+                </div> 
+
+                </div>
+
+                <div class="con1-place">
+
+                </div>
+            </div>
+
+
+
+            <div class="con2">
+
+                <div class="con2-greetings">
+                    HI! PLAYER!
+                </div>
+
+                <div class="con2-explore">
+                    <button class="button btn-round" id="explore">Explore</button>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="con3">
+
+                <div class="con3-pokemon">
+                    <div class="con3-pokemon-header">
+                        <span>ENCOUNTER</span>
+                    </div>
+                    
+                    <div class="display-pokemon">
+
+                    <div class="pokemon-name" id="pokemon-name"></div>
+                    <div class="encountered-pokemon"></div>
+                    <div class="capture-button"></div>
+                    </div>
+
+                
+
+                    <div class="con3-details">
+
+
+                    <div class="con3-det">
+                        <span>DETAILS</span>
+                    </div>
+                    
+
+                    <div class="con3-information"></div>
+
+                    </div>
+                </div>
+
+
+                
+
+                <div class="con3-catch">
+                    <div class="con3-catch-header">
+                        <span>CAPTURED</span>
+                        <span class="counter"></span>
+                    </div>
+
+                    <div class="pokeList">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html> 
